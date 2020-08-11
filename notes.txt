@@ -1,13 +1,13 @@
-String
-Number
-Object
-Boolean
-Null
-'
-Undefined
-Symbol
-
-
+1.The directions need to be made so the user knows what to do.
+2.There also needs to be a button that you can press to start the game.
+3.The questions and answers need to come up on the screen. 
+4.You need to have a button which you can submit your final answer which takes you to the next question.
+5.If you lose, something comes up saying the correct answer and then moves on to the next question,
+either after a set period of time, or a button that takes you to the next question.
+If you got It right, It says you got the answer correct and there will be a button that takes you to the next question.
+6.It repeats this process until all the questions are finished.
+7.There will be a score on a part of the page that says blank/blank correct.
+8.There will also be another button that says play again and restarts the trivia game.
 
 
 
