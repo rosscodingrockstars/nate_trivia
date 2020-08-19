@@ -1,53 +1,87 @@
-// const numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// for (let i = 0; i < numberArray.length; i++) {
-//   console.log(numberArray[i]);
-// }
-const favoriteFoods = {
-  breakfast: "bacon & eggs",
-  lunch: "cheddar bowls",
-  dinner: "pizza",
-  dessert: "brownies"
-};
-
-console.log(favoriteFoods.dinner);
-// const breakfastCard = `
-// <div class="card" style="width: 18rem;">
-//   <div class="card-body">
-//     <h5 class="card-title">${characters[i].name</h5>
-//     <h6 class="card-subtitle mb-2 text-muted">${characters[i].location//</h6>
-//     <p class="card-text">I love ${characters[i].loves</p>
-//     <a href="#" class="card-link">Card link</a>
-//     <a href="#" class="card-link">Another link</a>
-//   </div>
-// </div>
-// `;
-const characters = [
+const watermelon = [
   {
-    name: "Leslie Knope",
-    location: "Pawnee, India",
-    loves: "waffles"
+    question: "The first recorded watermelon harvest was in which place?",
+    answerChoices: [
+      "China",
+      "Cuba",
+      "Egypt",
+      "Poland",
+    ],
+    answer: "Egypt",
   },
   {
-    name: "Ron Swanson",
-    location: "Pawnee, India",
-    loves: "silence"
+    question: "According to the Guinness World records, how big was the biggest watermelon recorded?",
+    answerChoices: [
+      "26.50 pounds",
+      "350.50 pounds",
+      "30.00 pounds",
+      "478.90 pounds",
+    ],
+    answer: "350.50 pounds",
   },
-  {
-    name: "April Ludgate",
-    location: "Pawnee, India",
-    loves: "Halloween"
-  },
-  {
-    name: "Tom Haverford",
-    location: "Pawnee, India",
-    loves: "coconut water"
-  }
+{
+  question: "About what percentage of watermelon is water?",
+  answerChoices: [
+    "92%",
+    "91%",
+    "93%",
+    "97%",
+  ],
+  answer: "92%",
+},
+{
+  question: "Which vitamin type Isn't In watermelon?",
+  answerChoices: [
+    "A",
+    "C",
+    "B",
+    "D",
+  ],
+  answer: "D",
+},
+{
+question: "About how many calories per 100 grams in watermelon is there?",
+answerChoices: [
+  "60",
+  "30",
+  "20",
+  "90",
+],
+answer: "D",
+},
+{
+question: "Is watermelon a fruit?",
+answerChoices: [
+  "Yes",
+  "No",
+],
+answer: "Yes",
+},
+{
+question: "Which temperature range should your watermelon be grown in?",
+answerChoices: [
+  "70 to 90 degrees",
+  "40 to 60 degrees",
+  "100 to 120 degrees",
+  "-70 to 5 degrees",
+],
+answer: "70 to 90 degrees",
+},
+{
+question:"Is watermelon healthy?",
+answerChoices: [
+  "Yes",
+  "No",
+],
+answer: "Yes",
+},
+{
+  question:"Is watermelon healthy?",
+answerChoices: [
+  "Yes",
+  "No",
+],
+answer: "Yes",
+},
 ];
-for (let i = 0; i < characters.length; i++) {
-  const characterCard = `
-<div class="card" style="width: 18rem;"><div class="card-body"><h5 class="card-title">${characters[i].name}</h5><h6 class="card-subtitle mb-2 text-muted">${characters[i].location}</h6><p class="card-text">I love ${characters[i].loves}.</p></div></div> 
- `;
-  $(".col").append(characterCard);
-}
-// $(".col").append(breakfastCard);
-// console.log(favoriteFood.breakfast);
+

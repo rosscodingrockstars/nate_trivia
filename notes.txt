@@ -9,6 +9,7 @@ If you got It right, It says you got the answer correct and there will be a butt
 7.There will be a score on a part of the page that says blank/blank correct.
 8.There will also be another button that says play again and restarts the trivia game.
 
+commit to memory-key-value-pairs = things in arrays
 
 
 
@@ -27,3 +28,4 @@ If you got It right, It says you got the answer correct and there will be a butt
 
 Watermelon trivia
 The first recorded watermelon harvest was in which place?_____
+Egypt
