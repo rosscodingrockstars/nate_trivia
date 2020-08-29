@@ -105,4 +105,9 @@ answerChoices: [
 answer: "92%",
 gif: "images/gif10.webp",
 },
-],
+];
+
+console.log(watermelon[0].answerChoices[0])
+
+
+const Question
