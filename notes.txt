@@ -26,9 +26,7 @@ commit to memory-key-value-pairs = things in arrays
 
 
 
-Watermelon trivia
-The first recorded watermelon harvest was in which place?_____
-Egypt
+
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
