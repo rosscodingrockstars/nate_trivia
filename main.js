@@ -110,16 +110,34 @@ gif: "images/gif10.webp",
 console.log(watermelon[0].answerChoices[0])
 
 
-const Question = `<form>
-<div class="form-group">
-  <label for="exampleInputEmail1">Email address</label>
-  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+const Question = `
+<h2>${watermelon[0].question}</h2>
+
+<form>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+  ${watermelon[0].answerChoices[0]}
+  </label>
 </div>
-<div class="form-group">
-  <label for="exampleInputPassword1">Password</label>
-  <input type="password" class="form-control" id="exampleInputPassword1">
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+  ${watermelon[0].answerChoices[1]}
+  </label>
 </div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+  <label class="form-c-label" for="exampleRadios3">
+  ${watermelon[0].answerChoices[2]}
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+  ${watermelon[0].answerChoices[3]}
+    </label>
+    </div>
 <button type="submit" class="btn btn-primary">Submit</button>
 </form>`
 $(".col").append(Question)
