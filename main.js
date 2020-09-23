@@ -115,25 +115,25 @@ const Question = `
 
 <form>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="${watermelon[0].answerChoices[0]}" checked>
   <label class="form-check-label" for="exampleRadios1">
   ${watermelon[0].answerChoices[0]}
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="${watermelon[0].answerChoices[1]}">
   <label class="form-check-label" for="exampleRadios2">
   ${watermelon[0].answerChoices[1]}
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="${watermelon[0].answerChoices[2]}">
   <label class="form-c-label" for="exampleRadios3">
   ${watermelon[0].answerChoices[2]}
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="${watermelon[0].answerChoices[3]}">
   <label class="form-check-label" for="exampleRadios2">
   ${watermelon[0].answerChoices[3]}
     </label>
@@ -141,3 +141,5 @@ const Question = `
 <button type="submit" class="btn btn-primary">Submit</button>
 </form>`
 $(".col").append(Question)
+
+console.log($("input:checked").val())
