@@ -80,48 +80,48 @@ const Question = `
 
 <form>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="${
+  <input class="form-check-input" type="radio" name="radioButtons" id="radios1" value="${
     watermelon[0].answerChoices[0]
   }" checked>
-  <label class="form-check-label" for="exampleRadios1">
+  <label class="form-check-label" for="radios1">
   ${watermelon[0].answerChoices[0]}
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="${
+  <input class="form-check-input" type="radio" name="radioButtons" id="radios2" value="${
     watermelon[0].answerChoices[1]
   }">
-  <label class="form-check-label" for="exampleRadios2">
+  <label class="form-check-label" for="radios2">
   ${watermelon[0].answerChoices[1]}
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="${
+  <input class="form-check-input" type="radio" name="radioButtons" id="radios3" value="${
     watermelon[0].answerChoices[2]
   }">
-  <label class="form-c-label" for="exampleRadios3">
+  <label class="form-c-label" for="radios3">
   ${watermelon[0].answerChoices[2]}
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="${
+  <input class="form-check-input" type="radio" name="radioButtons" id="radios4" value="${
     watermelon[0].answerChoices[3]
   }">
-  <label class="form-check-label" for="exampleRadios2">
+  <label class="form-check-label" for="radios4">
   ${watermelon[0].answerChoices[3]}
     </label>
     </div>
 <button type="submit" class="btn btn-primary">Submit</button>
 </form>`;
-$(".col").append(Question);
+$(".question").append(Question);
 
 console.log($("input:checked").val());
 const answer = `${watermelon[0].answer}`;
 $(".btn-primary").click(function(e) {
-  e.preventDefault()
-  if(answer === $("input:checked").val()) {
-    console.log("correct")
-  } else { 
-    console.log("Incorrect")
+  e.preventDefault();
+  if (answer === $("input:checked").val()) {
+    $(".answer-check").text("correct");
+  } else {
+    $(".answer-check").text("incorrect");
   }
 });
