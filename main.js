@@ -75,10 +75,9 @@ const watermelon = [
 
 console.log(watermelon[0].answerChoices[0]);
 
-const Question = `
+const Question = `<form>
 <h2>${watermelon[0].question}</h2>
-
-<form>
+                       
 <div class="form-check">
   <input class="form-check-input" type="radio" name="radioButtons" id="radios1" value="${
     watermelon[0].answerChoices[0]
@@ -120,8 +119,11 @@ const answer = `${watermelon[0].answer}`;
 $(".btn-primary").click(function(e) {
   e.preventDefault();
   if (answer === $("input:checked").val()) {
+    $("form").hide();
     $(".answer-check").text("correct");
+    $(".gif-container").append($(".gif").attr("src", watermelon[0].gif));
   } else {
+    $("form").hide();
     $(".answer-check").text("incorrect");
   }
 });
