@@ -72,7 +72,7 @@ const watermelon = [
     gif: "images/gif10.webp"
   }
 ];
-
+$(".gif").hide();
 console.log(watermelon[0].answerChoices[0]);
 
 const Question = `<form>
@@ -121,9 +121,12 @@ $(".btn-primary").click(function(e) {
   if (answer === $("input:checked").val()) {
     $("form").hide();
     $(".answer-check").text("correct");
+    $(".gif").show();
     $(".gif-container").append($(".gif").attr("src", watermelon[0].gif));
   } else {
     $("form").hide();
     $(".answer-check").text("incorrect");
+    $(".gif").show() 
+  $(".gif-container").append($(".gif").attr("src", watermelon[0].gif))
   }
 });
