@@ -73,6 +73,7 @@ const watermelon = [
   }
 ];
 $(".gif").hide();
+$(".next").hide();
 console.log(watermelon[0].answerChoices[0]);
 
 const Question = `<form>
@@ -122,11 +123,13 @@ $(".btn-primary").click(function(e) {
     $("form").hide();
     $(".answer-check").text("correct");
     $(".gif").show();
+    $(".next").show();
     $(".gif-container").append($(".gif").attr("src", watermelon[0].gif));
   } else {
     $("form").hide();
     $(".answer-check").text("incorrect");
     $(".gif").show() 
+    $(".next").show();
   $(".gif-container").append($(".gif").attr("src", watermelon[0].gif))
   }
 });
