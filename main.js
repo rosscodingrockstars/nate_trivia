@@ -74,62 +74,67 @@ const watermelon = [
 ];
 $(".gif").hide();
 $(".next").hide();
-console.log(watermelon[0].answerChoices[0]);
-
+console.log(watermelon[questionCount].answerChoices[0]);
+let questionCount = 0;
 const Question = `<form>
-<h2>${watermelon[0].question}</h2>
+<h2>${watermelon[questionCount].question}</h2>
                        
 <div class="form-check">
   <input class="form-check-input" type="radio" name="radioButtons" id="radios1" value="${
-    watermelon[0].answerChoices[0]
+    watermelon[questionCount].answerChoices[0]
   }" checked>
   <label class="form-check-label" for="radios1">
-  ${watermelon[0].answerChoices[0]}
+  ${watermelon[questionCount].answerChoices[0]}
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="radioButtons" id="radios2" value="${
-    watermelon[0].answerChoices[1]
+    watermelon[questionCount].answerChoices[1]
   }">
   <label class="form-check-label" for="radios2">
-  ${watermelon[0].answerChoices[1]}
+  ${watermelon[questionCount].answerChoices[1]}
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="radioButtons" id="radios3" value="${
-    watermelon[0].answerChoices[2]
+    watermelon[questionCount].answerChoices[2]
   }">
   <label class="form-c-label" for="radios3">
-  ${watermelon[0].answerChoices[2]}
+  ${watermelon[questionCount].answerChoices[2]}
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="radioButtons" id="radios4" value="${
-    watermelon[0].answerChoices[3]
+    watermelon[questionCount].answerChoices[3]
   }">
   <label class="form-check-label" for="radios4">
-  ${watermelon[0].answerChoices[3]}
+  ${watermelon[questionCount].answerChoices[3]}
     </label>
     </div>
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="submit btn btn-primary">Submit</button>
 </form>`;
 $(".question").append(Question);
 
 console.log($("input:checked").val());
-const answer = `${watermelon[0].answer}`;
-$(".btn-primary").click(function(e) {
+const answer = `${watermelon[questionCount].answer}`;
+$(".submit").click(function(e) {
   e.preventDefault();
   if (answer === $("input:checked").val()) {
     $("form").hide();
     $(".answer-check").text("correct");
     $(".gif").show();
     $(".next").show();
-    $(".gif-container").append($(".gif").attr("src", watermelon[0].gif));
+    $(".gif-container").append($(".gif").attr("src", watermelon[questionCount].gif));
   } else {
     $("form").hide();
     $(".answer-check").text("incorrect");
     $(".gif").show() 
     $(".next").show();
-  $(".gif-container").append($(".gif").attr("src", watermelon[0].gif))
+  $(".gif-container").append($(".gif").attr("src", watermelon[questionCount].gif))
   }
+});
+
+$(".next").click(function(e) {
+  e.preventDefault();
+  questionCount++;
 });
