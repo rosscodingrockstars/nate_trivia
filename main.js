@@ -133,4 +133,5 @@ $(".submit").click(function (e) {
 $(".next").click(function (e) {
   e.preventDefault();
   questionCount++;
+  $("form").show();
 });
