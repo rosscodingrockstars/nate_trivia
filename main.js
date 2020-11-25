@@ -76,7 +76,11 @@ $(".gif").hide();
 $(".next").hide();
 
 let questionCount = 0;
+console.log(watermelon.length)
 function handleQandA() {
+  if (questionCount < watermelon.length) {
+
+  
   const Question = `<form>
   <h2>${watermelon[questionCount].question}</h2>
                          
@@ -115,6 +119,9 @@ function handleQandA() {
   <button type="submit" class="submit btn btn-primary">Submit</button>
   </form>`;
   $(".question").append(Question);
+} else {
+displayResults();
+}
 }
 console.log($("input:checked").val());
 const answer = `${watermelon[questionCount].answer}`;
@@ -152,3 +159,7 @@ $(".gif-container").append(
   $(".gif").attr("src", watermelon[questionCount].gif)
 );
 //
+function displayResults() {
+  console.log("results")
+}
+displayResults();
