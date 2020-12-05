@@ -72,16 +72,11 @@ const watermelon = [
     gif: "images/gif10.webp"
   }
 ];
-$(".gif").hide();
-$(".next").hide();
-
 let questionCount = 0;
-console.log(watermelon.length)
+console.log(watermelon.length);
 function handleQandA() {
   if (questionCount < watermelon.length) {
-
-  
-  const Question = `<form>
+    const Question = `<form>
   <h2>${watermelon[questionCount].question}</h2>
                          
   <div class="form-check">
@@ -118,48 +113,57 @@ function handleQandA() {
       </div>
   <button type="submit" class="submit btn btn-primary">Submit</button>
   </form>`;
-  $(".question").append(Question);
-} else {
-displayResults();
-}
+    $(".question").append(Question);
+    handleSubmit();
+  } else {
+    displayResults();
+  }
 }
 console.log($("input:checked").val());
 const answer = `${watermelon[questionCount].answer}`;
-$(".submit").click(function(e) {
-  e.preventDefault();
-  if (answer === $("input:checked").val()) {
-    correct();
-  } else {
-    incorrect();
-  }
-});
-
-$(".next").click(function(e) {
-  e.preventDefault();
-  questionCount++;
-  $("form").show();
-});
-
-// function incorrect() {
-$("form").hide();
-$(".answer-check").text("incorrect");
-$(".gif").show();
-$(".next").show();
-$(".gif-container").append(
-  $(".gif").attr("src", watermelon[questionCount].gif)
-);
-// }
-
-// function correct() {
-$("form").hide();
-$(".answer-check").text("correct");
-$(".gif").show();
-$(".next").show();
-$(".gif-container").append(
-  $(".gif").attr("src", watermelon[questionCount].gif)
-);
-//
-function displayResults() {
-  console.log("results")
+function handleSubmit() {
+  $(".submit").click(function(e) {
+    e.preventDefault();
+    if (answer === $("input:checked").val()) {
+      correct();
+    } else {
+      incorrect();
+    }
+    handleNext();
+  });
 }
-displayResults();
+function handleNext() {
+  $(".next").click(function(e) {
+    e.preventDefault();
+    questionCount++;
+    $("form").show();
+  });
+}
+function incorrect() {
+  $("form").hide();
+  $(".answer-check").text("incorrect");
+  $(".gif").show();
+  $(".next").show();
+  $(".gif-container").append(
+    $(".gif").attr("src", watermelon[questionCount].gif)
+  );
+}
+
+function correct() {
+  $("form").hide();
+  $(".answer-check").text("correct");
+  $(".gif").show();
+  $(".next").show();
+  $(".gif-container").append(
+    $(".gif").attr("src", watermelon[questionCount].gif)
+  );
+}
+function displayResults() {
+  console.log("results");
+}
+function startQuiz() {
+  $(".gif").hide();
+$(".next").hide();
+  handleQandA();
+}
+startQuiz();
