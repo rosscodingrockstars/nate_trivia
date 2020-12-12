@@ -74,6 +74,7 @@ const watermelon = [
 ];
 
 let questionCount;
+let score;
 
 function handleQandA() {
   if (questionCount < watermelon.length) {
@@ -155,6 +156,7 @@ function correct() {
   $(".answer-check").text("correct");
   $(".gif").show();
   $(".next").show();
+  score++;
   $(".gif-container").append(
     $(".gif").attr("src", watermelon[questionCount].gif)
   );
@@ -162,12 +164,17 @@ function correct() {
 }
 
 function displayResults() {
-  console.log("results");
+  //http://gph.is/24IKcSCaaaa
+  //SCORE
+  $(".answer-check").text("Congratulations, you finished! Your score out of 10 is");
+  $(".score").text(`${score}`);
 }
 
 function startQuiz() {
   $(".gif").hide();
   $(".next").hide();
+questionCount = 0;
+score = 0;
   handleQandA();
 }
 
