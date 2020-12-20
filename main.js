@@ -164,10 +164,14 @@ function correct() {
 }
 
 function displayResults() {
-  //http://gph.is/24IKcSCaaaa
+
   //SCORE
-  $(".answer-check").text("Congratulations, you finished! Your score out of 10 is");
-  $(".score").text(`${score}`);
+  $(".answer-check").text("Congratulations, you finished! Your score out of 10 is " + `${score}`);
+  //$(".score").text(`${score}`);
+  $(".gif").show();
+  $(".gif-container").append(
+    $(".gif").attr("src", "images/ending-gif.gif")
+  );
 }
 
 function startQuiz() {
