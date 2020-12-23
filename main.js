@@ -172,11 +172,13 @@ function displayResults() {
   $(".gif-container").append(
     $(".gif").attr("src", "images/ending-gif.gif")
   );
+  $(".play-again").show();
 }
 
 function startQuiz() {
   $(".gif").hide();
   $(".next").hide();
+  $(".play-again").hide();
 questionCount = 0;
 score = 0;
   handleQandA();

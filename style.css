@@ -1,3 +1,37 @@
-h1 {
-    color: blue;
+
+ :root {
+     --black: #000000;
+     --green: #93ad1b;
+     --red:   #e45351;
+     --darkred:   #bd1e1b;
+ }
+ h1 {
+    color: var(--green);
+}
+.btn-primary {
+    background-color: var(--red);
+    color: var(--black);
+    border: 1px solid var(--red);
+}
+.btn-primary:hover {
+    background-color: var(--darkred);
+    color: var(--black);
+    border: 1px solid var(--darkred);
+}
+.play-again-link {
+    color: var(--black);
+}
+.play-again-link:hover {
+    text-decoration: underline;
+    color: var(--black);
+}
+.btn-primary:focus {
+    background-color: var(--darkred);
+    color: var(--black);
+    border: 1px solid var(--darkred);
+}
+.btn-primary:active {
+    background-color: var(--darkred);
+    color: var(--black);
+    border: 1px solid var(--darkred);
 }
