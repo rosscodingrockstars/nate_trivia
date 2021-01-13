@@ -81,7 +81,7 @@ function handleQandA() {
     const Question = `<form>
   <h2>${watermelon[questionCount].question}</h2>
                          
-  <div class="form-check">
+  <div class="form-check mt-2">
     <input class="form-check-input" type="radio" name="radioButtons" id="radios1" value="${watermelon[questionCount].answerChoices[0]}" checked>
     <label class="form-check-label" for="radios1">
     ${watermelon[questionCount].answerChoices[0]}

@@ -5,6 +5,10 @@
      --red:   #e45351;
      --darkred:   #bd1e1b;
  }
+ h1, h2, h3, h4, h5, h6, p, label {
+     margin: 0;
+     padding: 0;
+ }
  h1 {
     color: var(--green);
 }
@@ -34,4 +38,7 @@
     background-color: var(--darkred);
     color: var(--black);
     border: 1px solid var(--darkred);
+}
+.btn {
+    margin-top:14px;
 }
